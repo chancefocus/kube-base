@@ -1,4 +1,4 @@
-From alpine:latest
+From docker:stable
 
 MAINTAINER Jimin Huang "huangjimin@whu.edu.cn"
 
