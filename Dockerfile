@@ -4,6 +4,9 @@ MAINTAINER Jimin Huang "huangjimin@whu.edu.cn"
 
 
 RUN apk add -U openssl curl tar gzip bash ca-certificates git wget jq
+RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub
+RUN wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.29-r0/glibc-2.29-r0.apk
+RUN apk add glibc-2.29-r0.apk
 
 RUN curl "https://kubernetes-helm.storage.googleapis.com/helm-v2.7.0-linux-amd64.tar.gz" | tar zx
 RUN mv linux-amd64/helm /usr/bin/
