@@ -8,7 +8,7 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/s
 RUN wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.29-r0/glibc-2.29-r0.apk
 RUN apk add glibc-2.29-r0.apk
 
-RUN curl "https://kubernetes-helm.storage.googleapis.com/helm-v2.7.0-linux-amd64.tar.gz" | tar zx
+RUN curl "https://kubernetes-helm.storage.googleapis.com/helm-v2.14.1-linux-amd64.tar.gz" | tar zx
 RUN mv linux-amd64/helm /usr/bin/
 RUN helm version --client
 
